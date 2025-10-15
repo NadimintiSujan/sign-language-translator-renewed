@@ -7,7 +7,7 @@ from config import ACTIONS, SEQ_LEN, MODELS_DIR
 from keypoints import mp_holistic, mediapipe_detect, draw_landmarks, extract_keypoints
 
 def main():
-    model = tf.keras.models.load_model(MODELS_DIR / "signlstm.h5")
+    model = tf.keras.models.load_model(MODELS_DIR / "signlstm.best.h5")
     actions = np.load(MODELS_DIR / "label_map.npy", allow_pickle=True)
 
     cap = cv2.VideoCapture(0)
